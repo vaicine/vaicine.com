@@ -1,0 +1,88 @@
+@import "../settings/global.scss", "compass";
+
+body, html {
+  font: 300 1em/1.5 sans-serif;
+  background:#f1e9d6;
+  height:100%;
+}
+
+.container {
+  min-height: 100%;
+  margin-bottom:-6em;
+  &:after{
+    content: "";
+    display: block;
+    height:2em;
+    padding-bottom:1em;
+  }
+}
+
+.content {
+  max-width:23em;
+  margin:5em auto 0;
+}
+
+.gravatar {
+  background: sprite($icons, gravatar) no-repeat;
+  width:134px;
+  height:134px;
+  margin:auto;
+}
+
+.logo {
+  background: sprite($icons, logo) no-repeat;
+  width:368px;
+  height:63px;
+  margin:2em auto;
+}
+
+header, footer {
+
+  width:100%;
+}
+
+header {
+  height:5.2em;
+  background: #fff image-url('background-top.png') repeat-x 0 2em;
+}
+
+footer {
+  height:4em;
+  background: #fff image-url('background-bottom.png') repeat-x;
+  clear:both;
+  padding-bottom:2em;
+}
+
+section.links {
+  a {
+    display:block;
+    float:left;
+    margin:0 1.5em 2em 0;
+    &:last-child {
+      margin-right:0;
+    }
+    i {
+      display:block;
+      &.icon-github {
+        @include sprite-dimensions($icons, github);
+        background: sprite($icons, github) repeat-x;
+      }
+      &.icon-linkedin {
+        @include sprite-dimensions($icons, linkedin);
+        background: sprite($icons, linkedin) repeat-x;
+      }
+      &.icon-facebook {
+        @include sprite-dimensions($icons, facebook);
+        background: sprite($icons, facebook) repeat-x;
+      }
+      &.icon-twitter {
+        @include sprite-dimensions($icons, twitter);
+        background: sprite($icons, twitter) repeat-x;
+      }
+      &.icon-instagram {
+        @include sprite-dimensions($icons, instagram);
+        background: sprite($icons, instagram) repeat-x;
+      }
+    }
+  }
+}

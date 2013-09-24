@@ -1,0 +1,8 @@
+@import "susy", "compass";
+
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+$break          : 12;
+$icons: sprite-map("icons/*.png", $position: 100%, $spacing: 0, $repeat: no-repeat);
