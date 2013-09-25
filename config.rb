@@ -59,7 +59,7 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
-  activate :favicon_maker
+  # activate :favicon_maker
 
   # Enable cache buster
   # activate :asset_hash
