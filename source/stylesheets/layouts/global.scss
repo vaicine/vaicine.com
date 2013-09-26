@@ -25,10 +25,12 @@ body, html {
 }
 
 .logo {
-  background: sprite($icons, logo) no-repeat;
-  width:368px;
-  height:63px;
+  background: image-url('icons/logo.png') no-repeat;
+  background-size:contain;
+  width:23em;
+  height:3.9em;
   margin:2em auto;
+  max-width:100%;
 }
 
 header, footer {
@@ -57,23 +59,28 @@ section.links {
       display:block;
       &.icon-github {
         @include sprite-dimensions($icons, github);
-        background: sprite($icons, github) repeat-x;
+        background: image-url('icons/github.png') no-repeat;
+        background-size:contain;
       }
       &.icon-linkedin {
         @include sprite-dimensions($icons, linkedin);
-        background: sprite($icons, linkedin) repeat-x;
+        background: image-url('icons/linkedin.png') no-repeat;
+        background-size:contain;
       }
       &.icon-facebook {
         @include sprite-dimensions($icons, facebook);
-        background: sprite($icons, facebook) repeat-x;
+        background: image-url('icons/facebook.png') no-repeat;
+        background-size:contain;
       }
       &.icon-twitter {
         @include sprite-dimensions($icons, twitter);
-        background: sprite($icons, twitter) repeat-x;
+        background: image-url('icons/twitter.png') no-repeat;
+        background-size:contain;
       }
       &.icon-instagram {
         @include sprite-dimensions($icons, instagram);
-        background: sprite($icons, instagram) repeat-x;
+        background: image-url('icons/instagram.png') no-repeat;
+        background-size:contain;
       }
     }
   }
