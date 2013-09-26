@@ -2,13 +2,8 @@
 
 body, html {
   font: 300 1em/1.5 sans-serif;
-  background:#fff;
-  height:100%;
-}
-
-.container {
   background:#f1e9d6;
-  margin:2em 0;
+  height:100%;
 }
 
 .content {
@@ -31,19 +26,6 @@ body, html {
   height:3.9em;
   margin:2em auto;
   max-width:100%;
-}
-
-header, footer {
-  height:52px;
-  width:100%;
-}
-
-header {
-  background: #fff image-url('background-top.png') repeat-x;
-}
-
-footer {
-  background: #fff image-url('background-bottom.png') repeat-x;
 }
 
 section.links {
