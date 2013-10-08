@@ -51,6 +51,12 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+ignore "javascripts/vendor/*"
+ignore "javascripts/lib/*"
+ignore "stylesheets/layouts/*"
+ignore "stylesheets/settings/*"
+ignore "stylesheets/vendor/*"
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
