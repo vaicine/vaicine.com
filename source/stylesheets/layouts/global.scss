@@ -6,6 +6,10 @@ body, html {
   height:100%;
 }
 
+body {
+  visibility: hidden;
+}
+
 .content {
   max-width:23em;
   margin:0 auto;
@@ -19,13 +23,16 @@ body, html {
   margin:auto;
 }
 
-.logo {
+h1.logo {
   background: image-url('icons/logo.png') no-repeat;
   background-size:contain;
   width:23em;
   height:3.9em;
   margin:2em auto;
   max-width:100%;
+  display:block;
+  text-indent:-99999px;
+  font-size:1rem;
 }
 
 section.links {
@@ -39,6 +46,21 @@ section.links {
     }
     i {
       display:block;
+      position:relative;
+      &:hover {
+        &:after {
+          content: "";
+          @include sprite-dimensions($icons, arrow);
+          background: image-url('icons/arrow.png') no-repeat;
+          background-size:contain;
+          position:absolute;
+          bottom: -1.5rem;
+          left: 50%;
+          margin-left: -10px;
+          animation: blink 0.5s steps(2, start) infinite;
+          -webkit-animation: blink 0.5s steps(2, start) infinite;
+        }
+      }
       &.icon-github {
         @include sprite-dimensions($icons, github);
         background: image-url('icons/github.png') no-repeat;
@@ -66,4 +88,10 @@ section.links {
       }
     }
   }
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+@-webkit-keyframes blink {
+  to { visibility: hidden; }
 }
