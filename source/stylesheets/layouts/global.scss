@@ -18,9 +18,16 @@ body {
 
 .gravatar {
   background: sprite($icons, gravatar) no-repeat;
-  width:134px;
-  height:134px;
+  @include sprite-dimensions($icons, gravatar);
   margin:auto;
+  &:hover {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
 }
 
 h1.logo {
@@ -33,6 +40,7 @@ h1.logo {
   display:block;
   text-indent:-99999px;
   font-size:1rem;
+
 }
 
 section.links {
